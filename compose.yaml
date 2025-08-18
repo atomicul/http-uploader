@@ -3,7 +3,6 @@ services:
     image: ghcr.io/atomicul/http-uploader/backend:main
     build: ./backend
     pull_policy: missing
-    restart: on-failure:3
     # environment: # env vars reference in README
     #   PORT: "3001"
     #   MAX_FILE_SIZE: "0"
@@ -20,8 +19,7 @@ services:
       # args: # build args reference in README
       #   VITE_BACKEND_PORT: 3001
       #   VITE_BACKEND_URL: http://example.com/
-    pull_policy: build
-    restart: on-failure:3
+    pull_policy: missing
     depends_on:
       - backend
     # ports:
@@ -29,7 +27,6 @@ services:
 
   proxy:
     image: ghcr.io/atomicul/docker-reverse-proxy:v1.1.1
-    restart: on-failure:3
     depends_on:
       - frontend
       - backend

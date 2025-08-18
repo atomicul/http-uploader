@@ -1,6 +1,8 @@
 # HTTP Uploader
 Simple web server to accept file uploading directly to disk from any host
 
+![app window](https://raw.githubusercontent.com/atomicul/http-uploader/refs/heads/main/.github/example.jpg)
+
 ## Running with docker compose
 1. Clone the repository
 ```bash
